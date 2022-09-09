@@ -1,0 +1,8 @@
+a=input('请输入学生姓名:')
+b=input('请输入学生学号：')
+c=input('请输入学生语文成绩：')
+d=input('请输入学生数学成绩：')
+e=input('请输入学生英语成绩：')
+sub=float(c)+float(d)+float(e)
+print('学号','姓名','语文','数学','英语','总分',sep="\t")
+print("%s\t%s\t%s\t%s\t%s\t%.1f"%(b,a,c,d,e,sub))

@@ -1,0 +1,52 @@
+2022-05-16T11:35:53,482 Using pip 22.0.4 from C:\Users\31450\AppData\Local\Programs\Python\Python310\lib\site-packages\pip (python 3.10)
+2022-05-16T11:35:53,483 Non-user install because site-packages writeable
+2022-05-16T11:35:53,511 Created temporary directory: C:\Users\31450\AppData\Local\Temp\pip-ephem-wheel-cache-q5a7oe7q
+2022-05-16T11:35:53,511 Created temporary directory: C:\Users\31450\AppData\Local\Temp\pip-req-tracker-uhgvx_47
+2022-05-16T11:35:53,511 Initialized build tracking at C:\Users\31450\AppData\Local\Temp\pip-req-tracker-uhgvx_47
+2022-05-16T11:35:53,512 Created build tracker: C:\Users\31450\AppData\Local\Temp\pip-req-tracker-uhgvx_47
+2022-05-16T11:35:53,512 Entered build tracker: C:\Users\31450\AppData\Local\Temp\pip-req-tracker-uhgvx_47
+2022-05-16T11:35:53,512 Created temporary directory: C:\Users\31450\AppData\Local\Temp\pip-install-3g5nh_43
+2022-05-16T11:35:53,523 1 location(s) to search for versions of pip-revipip-review:
+2022-05-16T11:35:53,523 * https://pypi.org/simple/pip-revipip-review/
+2022-05-16T11:35:53,524 Fetching project page and analyzing links: https://pypi.org/simple/pip-revipip-review/
+2022-05-16T11:35:53,524 Getting page https://pypi.org/simple/pip-revipip-review/
+2022-05-16T11:35:53,524 Found index url https://pypi.org/simple
+2022-05-16T11:35:54,801 Could not fetch URL https://pypi.org/simple/pip-revipip-review/: 404 Client Error: Not Found for url: https://pypi.org/simple/pip-revipip-review/ - skipping
+2022-05-16T11:35:54,802 Skipping link: not a file: https://pypi.org/simple/pip-revipip-review/
+2022-05-16T11:35:54,802 Given no hashes to check 0 links for project 'pip-revipip-review': discarding no candidates
+2022-05-16T11:35:54,802 ERROR: Could not find a version that satisfies the requirement pip-revipip-review (from versions: none)
+2022-05-16T11:35:54,803 ERROR: No matching distribution found for pip-revipip-review
+2022-05-16T11:35:54,804 Exception information:
+2022-05-16T11:35:54,804 Traceback (most recent call last):
+2022-05-16T11:35:54,804   File "C:\Users\31450\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\resolvelib\resolvers.py", line 348, in resolve
+2022-05-16T11:35:54,804     self._add_to_criteria(self.state.criteria, r, parent=None)
+2022-05-16T11:35:54,804   File "C:\Users\31450\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\resolvelib\resolvers.py", line 173, in _add_to_criteria
+2022-05-16T11:35:54,804     raise RequirementsConflicted(criterion)
+2022-05-16T11:35:54,804 pip._vendor.resolvelib.resolvers.RequirementsConflicted: Requirements conflict: SpecifierRequirement('pip-revipip-review')
+2022-05-16T11:35:54,804 
+2022-05-16T11:35:54,804 During handling of the above exception, another exception occurred:
+2022-05-16T11:35:54,804 
+2022-05-16T11:35:54,804 Traceback (most recent call last):
+2022-05-16T11:35:54,804   File "C:\Users\31450\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\resolver.py", line 94, in resolve
+2022-05-16T11:35:54,804     result = self._result = resolver.resolve(
+2022-05-16T11:35:54,804   File "C:\Users\31450\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\resolvelib\resolvers.py", line 481, in resolve
+2022-05-16T11:35:54,804     state = resolution.resolve(requirements, max_rounds=max_rounds)
+2022-05-16T11:35:54,804   File "C:\Users\31450\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\resolvelib\resolvers.py", line 350, in resolve
+2022-05-16T11:35:54,804     raise ResolutionImpossible(e.criterion.information)
+2022-05-16T11:35:54,804 pip._vendor.resolvelib.resolvers.ResolutionImpossible: [RequirementInformation(requirement=SpecifierRequirement('pip-revipip-review'), parent=None)]
+2022-05-16T11:35:54,804 
+2022-05-16T11:35:54,804 The above exception was the direct cause of the following exception:
+2022-05-16T11:35:54,804 
+2022-05-16T11:35:54,804 Traceback (most recent call last):
+2022-05-16T11:35:54,804   File "C:\Users\31450\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\cli\base_command.py", line 167, in exc_logging_wrapper
+2022-05-16T11:35:54,804     status = run_func(*args)
+2022-05-16T11:35:54,804   File "C:\Users\31450\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\cli\req_command.py", line 205, in wrapper
+2022-05-16T11:35:54,804     return func(self, options, args)
+2022-05-16T11:35:54,804   File "C:\Users\31450\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\commands\install.py", line 339, in run
+2022-05-16T11:35:54,804     requirement_set = resolver.resolve(
+2022-05-16T11:35:54,804   File "C:\Users\31450\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\resolver.py", line 103, in resolve
+2022-05-16T11:35:54,804     raise error from e
+2022-05-16T11:35:54,804 pip._internal.exceptions.DistributionNotFound: No matching distribution found for pip-revipip-review
+2022-05-16T11:35:54,814 WARNING: You are using pip version 22.0.4; however, version 22.1 is available.
+2022-05-16T11:35:54,814 You should consider upgrading via the 'C:\Users\31450\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip' command.
+2022-05-16T11:35:54,815 Removed build tracker: 'C:\\Users\\31450\\AppData\\Local\\Temp\\pip-req-tracker-uhgvx_47'
