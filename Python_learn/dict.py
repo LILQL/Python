@@ -13,7 +13,7 @@ print(info["name"])
 '''
 #print(info["gender"]) #直接访问，报错
 
-print(info.get("gender")) #使用get，没找到会返回None（错误捕捉）
+print(info.get("gender")) #使用get,没找到会返回None（错误捕捉）
 
 print(info.get("gender","m"))#自定义抛出结果
 '''
