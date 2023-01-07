@@ -1,6 +1,32 @@
 import collections
-import time
 import turtle
+
+window = turtle.Screen()
+window.tracer(0)
+window.bgcolor(50 / 255, 50 / 255, 50 / 255)
+
+
+#x轴
+x=turtle.Turtle()
+x.pensize(2)
+x.color(255/255,255/255,255/255)
+x.penup()
+x.goto(-300, 0)
+x.pendown()
+x.goto(300, 0)
+x.penup()
+
+
+#y轴
+y=turtle.Turtle()
+y.left(90)
+y.pensize(2)
+y.color(255/255,255/255,255/255)
+y.penup()
+y.goto(0, -300)
+y.pendown()
+y.goto(0, 300)
+y.penup()
 
 radius = 100
 angular_speed = 2
@@ -8,10 +34,8 @@ angular_speed = 2
 fps = 12  # Frames per second
 time_per_frame = 1 / fps
 
-window = turtle.Screen()
-window.setup(1000, 1000)
-window.tracer(0)
-window.bgcolor(50 / 255, 50 / 255, 50 / 255)
+radius = 100
+angular_speed = 2
 
 main_dot = turtle.Turtle()
 main_dot.pensize(5)
@@ -25,10 +49,7 @@ vertical_dot = turtle.Turtle()
 vertical_dot.shape("circle")
 vertical_dot.color(248 / 255, 237 / 255, 49 / 255)
 vertical_dot.penup()
-vertical_dot.setposition(
-    main_dot.xcor() + 2 * radius,
-    main_dot.ycor(),
-)
+vertical_dot.setposition(0,0)
 
 vertical_plot = vertical_dot.clone()
 vertical_plot.hideturtle()
@@ -46,20 +67,16 @@ horizontal_dot = turtle.Turtle()
 horizontal_dot.shape("circle")
 horizontal_dot.color(242 / 255, 114 / 255, 124 / 255)
 horizontal_dot.penup()
-horizontal_dot.setposition(
-    main_dot.xcor(),
-    main_dot.ycor() - radius,
-)
+horizontal_dot.setposition(0,0)
 
 horizontal_plot = horizontal_dot.clone()
 horizontal_plot.hideturtle()
 start_y = int(horizontal_plot.ycor())
-y_range = range(start_y, -window.window_height() // 2 - 1, -1)
+y_range = range(start_x, window.window_width() // 2 + 1)
 horizontal_values = collections.deque(None for _ in y_range)
-horizontal_values[0] = horizontal_plot.xcor()
+horizontal_values[0] = horizontal_plot.ycor()
 
 while True:
-    frame_start = time.time()
     main_dot.circle(radius, angular_speed)
 
     vertical_dot.sety(main_dot.ycor())
@@ -73,16 +90,14 @@ while True:
             vertical_plot.setposition(x, y)
             vertical_plot.dot(5)
 
-    horizontal_dot.setx(main_dot.xcor())
+    horizontal_dot.sety(main_dot.xcor())
     horizontal_plot.clear()
-    horizontal_values.appendleft(horizontal_dot.xcor())
+    horizontal_values.appendleft(horizontal_dot.ycor())
     horizontal_values.pop()
-    for x, y in zip(horizontal_values, y_range):
-        if x is not None:
+
+    for y, x in zip(horizontal_values, y_range):
+        if y is not None:
             horizontal_plot.setposition(x, y)
             horizontal_plot.dot(5)
 
-    # Wait until minimum frame time reached
-    while time.time() - frame_start < time_per_frame:
-        pass
     window.update()
