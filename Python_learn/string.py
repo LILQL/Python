@@ -18,7 +18,7 @@ for i in range(len(a)):
 str ="chengdu"
 print(str)
 print(str[0])
-print(str[0,5])
+print(str[0:5])
 print(str[1:7:2]) 
 print(str[4:])
 print(str[:6])

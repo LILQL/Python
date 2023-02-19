@@ -37,7 +37,7 @@ for i in range(len(a)):
 '''
 #或
 '''
-for name in a
+for name in a:
     print(name)
 '''
 #while语句

@@ -13,7 +13,7 @@ print(info["name"])
 '''
 #print(info["gender"]) #直接访问，报错
 
-print(info.get("gender")) #使用get,没找到会返回None（错误捕捉）
+print(info.get("gender")) #使用get,没找到会返回None(错误捕捉)
 
 print(info.get("gender","m"))#自定义抛出结果
 '''
@@ -54,7 +54,7 @@ info["name"]="qianli"
 info ={"name":"abc","age":18}
 print(info.keys()) #所以的键
 print(info.values())#所以的值
-print(info.items())#所有的项，获取格式为tuple
+print(info.items())#所有的项,获取格式为tuple
 
 for key,value in info.items():
     print("key=%s,value=%s"%(key,value))

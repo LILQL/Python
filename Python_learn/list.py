@@ -74,6 +74,7 @@ a.sort()#升序排列
 a.sort(reverse=True)#降序排列
 '''
 
+'''
 #嵌套列表操作(实例)
 namelist=[1,2,3,4,5,6,7,8,9]
 offices=[[],[],[]]
@@ -81,6 +82,7 @@ import random
 for name in namelist:
     index1 = random.randint(0,2)
     offices[index1].append(name)
+
 
 i=1
 for office in offices:
@@ -90,3 +92,4 @@ for office in offices:
         print("names is:%d"%name)
     print("\n")
     print("-"*20)
+'''
